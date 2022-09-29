@@ -2,13 +2,10 @@ import { NumberFilter } from 'components/NumberFilter/NumberFilter';
 import { NumbersList } from 'components/NumbersList/NumbersList';
 import { useState } from 'react';
 
-import data from '../../numbers.json';
-// console.log(data);
 import dat from '../../numbe.json';
 
 export const AutoNum = () => {
   const [query, setQuery] = useState('');
-  //   console.log(query);
 
   const onChange = value => {
     setQuery(value);
