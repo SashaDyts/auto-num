@@ -14,8 +14,6 @@ export const AutoNum = () => {
   const numb = () => {
     const normalizedQuery = query.toUpperCase();
 
-    console.log('HA' === 'HA');
-
     return dat.filter(number =>
       number.number.join(' ').includes(normalizedQuery)
     );
