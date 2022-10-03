@@ -1,22 +1,32 @@
+import { useState } from 'react';
+import { Input, Form } from './NumberFilter.styled';
+
 export const NumberFilter = ({ onChange }) => {
+  const [filter, setFilter] = useState('');
+
+  const onHandleChange = e => {
+    setFilter(e.target.value);
+    onChange(e.target.value);
+  };
+
   return (
-    <form
+    <Form
       onSubmit={e => {
         e.preventDefault();
       }}
     >
       <label>
-        type number
-        <input
+        <Input
+          value={filter}
           type="text"
           maxLength="2"
           style={{ textTransform: 'uppercase' }}
           required
           onChange={e => {
-            onChange(e.target.value);
+            onHandleChange(e);
           }}
         />
       </label>
-    </form>
+    </Form>
   );
 };
