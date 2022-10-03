@@ -1,7 +1,7 @@
-import { NumberFilter } from 'components/NumberFilter/NumberFilter';
-import { NumbersList } from 'components/NumbersList/NumbersList';
+// import { NumberFilter } from 'components/NumberFilter/NumberFilter';
+// import { NumbersList } from 'components/NumbersList/NumbersList';
 import { SearchByNumber } from './SearchByNumber/SearchByNumber';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 import { Container } from './AutoNum.styled';
 
