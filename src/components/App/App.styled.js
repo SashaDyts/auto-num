@@ -12,5 +12,5 @@ export const Main = styled.main`
   padding-top: 20px;
   height: 100vh;
 
-  background: linear-gradient(to bottom right, blue, yellow);
+  background: linear-gradient(to right, blue, yellow);
 `;

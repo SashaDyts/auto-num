@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Form = styled.form`
   display: flex;
   justify-content: center;
+  margin-top: 20px;
   margin-bottom: 20px;
 `;
 

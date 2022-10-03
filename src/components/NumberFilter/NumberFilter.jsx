@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { Input, Form } from './NumberFilter.styled';
 
-export const NumberFilter = ({ onChange }) => {
+export const NumberFilter = ({
+  onChange,
+  maxLength = 20,
+  textTransform = 'none',
+}) => {
   const [filter, setFilter] = useState('');
 
   const onHandleChange = e => {
@@ -19,8 +23,8 @@ export const NumberFilter = ({ onChange }) => {
         <Input
           value={filter}
           type="text"
-          maxLength="2"
-          style={{ textTransform: 'uppercase' }}
+          maxLength={maxLength}
+          style={{ textTransform: textTransform }}
           required
           onChange={e => {
             onHandleChange(e);

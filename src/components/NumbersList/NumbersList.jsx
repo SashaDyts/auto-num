@@ -1,15 +1,22 @@
 import { ListItem, Error } from './NumberList.styled';
 
-export const NumbersList = ({ data }) => {
+export const NumbersList = ({ data, whatToSearch }) => {
   return data.length === 0 ? (
     <Error>Не знайдено</Error>
   ) : (
     <ul>
-      {data.map(number => (
-        <ListItem key={number.number}>
-          <p>{number.location}</p>
-        </ListItem>
-      ))}
+      {data.map(number =>
+        whatToSearch === 'location' ? (
+          <ListItem key={number.number}>
+            <p>{number[whatToSearch]}</p>
+          </ListItem>
+        ) : (
+          <ListItem key={number.number}>
+            <p>{number.location} :</p>
+            <p>{number[whatToSearch].join(',').slice(6)}</p>
+          </ListItem>
+        )
+      )}
     </ul>
   );
 
@@ -23,3 +30,9 @@ export const NumbersList = ({ data }) => {
   // </ul>
   // );
 };
+
+// (
+//         <ListItem key={number.number}>
+//           <p>{number[whatToSearch]}</p>
+//         </ListItem>
+//       )

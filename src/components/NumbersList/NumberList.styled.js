@@ -5,6 +5,8 @@ export const ListItem = styled.li`
 
   color: white;
 
+  text-align: center;
+
   :not(:last-child) {
     margin-bottom: 10px;
   }
